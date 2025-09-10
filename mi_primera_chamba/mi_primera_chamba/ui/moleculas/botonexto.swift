@@ -30,3 +30,4 @@ struct Botonexto: View {
     
     Botonexto(accion: { print("HOla mundo") }, texto: $texto )
 }
+
