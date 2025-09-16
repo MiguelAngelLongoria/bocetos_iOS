@@ -96,4 +96,7 @@ struct JuegoAdivinaNumero: View {
  .font(.system(.body, design: .monospaced)) → Fuente monoespaciada tipo consola.
 
  .overlay(RoundedRectangle(...).stroke(Color.green)) → Bordes verdes en botones/cajas.
+ 
+ 
+ https://developer.apple.com/documentation/swiftui/view
 */
