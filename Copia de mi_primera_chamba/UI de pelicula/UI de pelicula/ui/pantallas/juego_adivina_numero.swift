@@ -20,15 +20,15 @@ struct JuegoAdivinaNumero: View {
             
             VStack {
                 Spoiler(texto: "Numero \(juego.numero_secreto)")
-                    .foregroundColor(.blue) /// Texto verde Matrix
+                    .foregroundColor(.green) /// Texto verde Matrix
                 
                 Spacer()
                 
                 Text("REGLAS")
-                    .foregroundColor(.blue) /// Verde
+                    .foregroundColor(.green) /// Verde
                 
                 Text("Cantidad de intentos: \(juego.intentos)")
-                    .foregroundColor(.blue) /// Verde
+                    .foregroundColor(.green) /// Verde
                 
                 Spacer()
                 
@@ -42,12 +42,12 @@ struct JuegoAdivinaNumero: View {
                     place_holder: "Introduce un numero",
                     etiqueta: "Intentar"
                 )
-                .foregroundColor(.blue) /// Verde
+                .foregroundColor(.green) /// Verde
                 .padding()
                 .background(Color.black)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.blue, lineWidth: 1) /// Borde verde
+                        .stroke(Color.green, lineWidth: 1) /// Borde verde
                 )
                 
                 if (juego.estado_actual == .ha_ganado) {
@@ -55,21 +55,21 @@ struct JuegoAdivinaNumero: View {
                     
                     Button(action: {}){
                         Text("Reiniciar juego")
-                            .foregroundColor(.blue) /// Verde
+                            .foregroundColor(.green) /// Verde
                     }
                 }
                 
                 Leyenda(peligro: $leyenda_advertencia, texto: comentario)
-                    .foregroundColor(.blue) /// Verde
+                    .foregroundColor(.green) /// Verde
                 
                 Spacer()
                 
                 VStack {
                     RenglonColumna2(columna_1: "Nombre", columna_2: "Puntuacion")
-                        .foregroundColor(.blue) /// Verde
+                        .foregroundColor(.green) /// Verde
                     ForEach(jugadores_falsos) { jugador in
                         RenglonColumna2(columna_1: jugador.nombre, columna_2: "\(jugador.puntuacion)")
-                            .foregroundColor(.blue) /// Verde
+                            .foregroundColor(.green) /// Verde
                     }
                 }
                 
@@ -91,11 +91,11 @@ struct JuegoAdivinaNumero: View {
 
  Color.black.ignoresSafeArea() → Fondo negro en toda la vista.
 
- .foregroundColor(.blue) → Todos los textos y elementos en verde Matrix.
+ .foregroundColor(.green) → Todos los textos y elementos en verde Matrix.
 
  .font(.system(.body, design: .monospaced)) → Fuente monoespaciada tipo consola.
 
- .overlay(RoundedRectangle(...).stroke(Color.blue)) → Bordes verdes en botones/cajas.
+ .overlay(RoundedRectangle(...).stroke(Color.green)) → Bordes verdes en botones/cajas.
  
  
  https://developer.apple.com/documentation/swiftui/view

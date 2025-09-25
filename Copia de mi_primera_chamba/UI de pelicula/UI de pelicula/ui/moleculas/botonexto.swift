@@ -12,27 +12,27 @@ struct Botonexto: View {
             TextField(place_holder, text: $texto)
                 .frame(width: 250)
                 .multilineTextAlignment(.center)
-                .foregroundColor(.blue) /// Texto verde
+                .foregroundColor(.green) /// Texto verde
                 .background(Color.black) /// Fondo negro
                 .overlay(
                     RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color.blue, lineWidth: 1) /// Borde verde
+                        .stroke(Color.green, lineWidth: 1) /// Borde verde
                 )
                 .font(.system(.body, design: .monospaced)) /// Consola estilo Matrix
             
             Button(action: accion) {
                 VStack {
                     Text(etiqueta)
-                        .foregroundColor(.blue) /// Verde
+                        .foregroundColor(.green) /// Verde
                         .font(.system(.body, design: .monospaced))
                     Image(systemName: "paperplane.fill")
-                        .foregroundColor(.blue) /// Verde
+                        .foregroundColor(.green) /// Verde
                 }
                 .padding(8)
                 .background(Color.black)
                 .overlay(
                     RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color.blue, lineWidth: 1) /// Borde verde
+                        .stroke(Color.green, lineWidth: 1) /// Borde verde
                 )
             }
         }
@@ -49,11 +49,11 @@ struct Botonexto: View {
 /*
  
 
- Texto y Image con .foregroundColor(.blue)
+ Texto y Image con .foregroundColor(.green)
 
  .background(Color.black)
 
- .overlay(RoundedRectangle(...).stroke(Color.blue))
+ .overlay(RoundedRectangle(...).stroke(Color.green))
 
  .font(.system(.body, design: .monospaced))
 */
