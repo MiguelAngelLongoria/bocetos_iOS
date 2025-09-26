@@ -1,29 +1,32 @@
 //
 //  cajita_seleccion.swift
-//  boceto_02
+//  boceto_2
 //
-//  Created by Miguel Angel Longoria Granados on 24/09/25.
+//  Created by Jadzia Gallegos on 24/09/25.
 //
 
 import SwiftUI
+
 struct CajaSeleccionada: View {
     @Binding var checado: Bool
     var tamaño: CGFloat = 40
+    
     var body: some View {
         ZStack{
             Rectangle()
-                .frame(width: 40, height: 40)
+                .frame(width: tamaño, height: tamaño)
                 .cornerRadius(5)
                 .foregroundStyle(checado ? .blue: .gray)
-                .onTapGesture {
-                    checado.toggle()
-                }
-            Image(systemName: "checkmark.circle.fill")
+            
+            Image(systemName: "checkmark.seal")
                 .resizable()
                 .scaledToFit()
                 .frame(width: tamaño - (tamaño * 0.20))
                 .foregroundStyle(checado ? .white: .gray)
-
+            
+        }
+        .onTapGesture {
+            checado.toggle()
         }
     }
 }

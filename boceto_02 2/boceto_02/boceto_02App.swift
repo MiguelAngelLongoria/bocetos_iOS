@@ -1,9 +1,10 @@
 //
-//  boceto_02App.swift
-//  boceto_02
+//  boceto_2App.swift
+//  boceto_2
 //
-//  Created by Miguel Angel Longoria Granados on 22/09/25.
+//  Created by Jadzia Gallegos on 22/09/25.
 //
+
 import SwiftUI
 
 @main

@@ -1,20 +1,21 @@
 //
-//  pantalla_1.swift
-//  boceto_02
+//  pantalla_2.swift
+//  boceto_2
 //
-//  Created by Miguel Angel Longoria Granados on 22/09/25.
+//  Created by Jadzia Gallegos on 22/09/25.
 //
+
 import SwiftUI
 
-struct Pantalla1: View {
+struct Pantalla2: View {
     @Environment(ControladorBasico.self) var controlador
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "square.and.arrow.up")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world! cantidad de clicks es: \(controlador.clicks)")
+            Text("BIenvendio a la pantalla dos donde clicks vale: \(controlador.clicks)")
         }
         .onTapGesture {
             controlador.clicks += 1 ///  clicks.establacer_valor(nuevo_valor)
@@ -24,6 +25,5 @@ struct Pantalla1: View {
 }
 
 #Preview {
-    Pantalla1()
-        .environment(ControladorBasico())
+    Pantalla2()
 }
