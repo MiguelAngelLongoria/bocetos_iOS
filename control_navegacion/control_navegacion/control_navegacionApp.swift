@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct control_navegacionApp: App {
+    @State var contorlador_app = ControladorGeneral()
     var body: some Scene {
         WindowGroup {
             NavegacionPrincipal()
+                .environment(contorlador_app)
         }
     }
 }

@@ -9,27 +9,29 @@ import SwiftUI
 
 struct PantallaInicio: View{
     var body: some View{
-        VStack{
-            Text("Bienvenidos al Himalaya")
-            
-            NavigationLink {
-                PantallaConfiguracion()
-            } label: {
-                Text("Ir a pantalla configuracion")
+        NavigationStack{
+            VStack{
+                Text("Bienvenidos al Himalaya")
+                
+                NavigationLink {
+                    PantallaConfiguracion()
+                } label: {
+                    Text("Ir a pantalla configuracion")
+                }
+                
+                NavigationLink {
+                    PantallaGaleria()
+                } label: {
+                    Text("Ir a pantalla galeria")
+                }
             }
             
-            NavigationLink {
-                PantallaGaleria()
-            } label: {
-                Text("Ir a pantalla galeria")
-            }
         }
-        
     }
 }
 
 #Preview {
-    NavigationStack{
+   
         PantallaInicio()
     }
-}
+

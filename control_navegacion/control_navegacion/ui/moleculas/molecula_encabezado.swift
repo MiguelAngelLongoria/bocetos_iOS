@@ -1,24 +1,23 @@
-
 import SwiftUI
+import SceneKit
 
 
 struct Encabezado: View {
-    var noticia_presentar: Noticia = Noticia(
-        titular: "404", cuerpo: "No encontrado", imagen: "imagen_chida", prioridad: .importante
+    var publicacion: Publicacion = Publicacion(
+        userId: 1, id: 1, title: "-404", body: "No encontrado"
     )
     
     var body: some View {
         HStack(spacing: 10){
-            Image(noticia_presentar.imagen)
-            
+            /*Image(noticia_presentar.imagen)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100)
-                .clipShape( Capsule() )
+                .clipShape( Circle() )*/
             
             VStack{
                 HStack{
-                    Text(noticia_presentar.titular)
+                    Text(publicacion.title)
                         .lineLimit(1)
                         .fontWeight(.bold)
                         .foregroundStyle(Color.red)
@@ -26,17 +25,16 @@ struct Encabezado: View {
                     Spacer()
                 }
                 
-                Spacer()
+                //Spacer()
                 
                 HStack{
-                    Text(noticia_presentar.cuerpo)
+                    Text(publicacion.body)
                         .lineLimit(2)
                     Spacer()
                 }
             }
         }
-        /*
-        .frame(height: 80)
+        .frame(minHeight: 50, idealHeight: 75, maxHeight: 100)
         .padding(10)
         .background{
             Rectangle()
@@ -45,24 +43,6 @@ struct Encabezado: View {
                 //.padding(-10)
         }
         .padding(5)
-         */
-        .frame(height: 80)
-        .padding(10)
-        .background{
-            RoundedRectangle(cornerRadius: 30)
-                .fill(
-                    LinearGradient(
-                        gradient: Gradient(stops: [
-                            .init(color: .blue, location: 0),
-                            .init(color: .cyan, location: 0.5),
-                        ]),
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                )
-        }
-        .padding(5)
-
         
     }
 }
