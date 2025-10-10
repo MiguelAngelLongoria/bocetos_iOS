@@ -12,41 +12,34 @@ struct PantallaNoticias: View {
     @Environment(ControladorGeneral.self) var controlador
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(controlador.publicaicones) { publicacion in
-                    
-                    NavigationLink {
-                        //PantallaNota(noticia: noticia)
-                    } label: {
-                        Encabezado(publicacion: publicacion)
-                    }
-                    .buttonStyle(.plain)
-                     
-                }
-            }
-            .padding()
-        }.onAppear{
-            if controlador.publicaicones.isEmpty{Task{
-                await
-                controlador.descargar_publiaciones()
-            }}
+        if(controlador.publicaicones.isEmpty){
+            Text("estamso cargando los daots, porfavor espera.")
         }
-        // Fondo agregado
-        .background(
-            LinearGradient(
-                colors: [.blue.opacity(0.2), .white], // degradado azul a blanco
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea() // se extiende a toda la pantalla
-        )
-    }
-}
-
+        else{
+            NavigationStack
+        
+            ScrollView {
+                LazyVStack {
+                    ForEach(controlador.publicaicones) { publicacion in
+                        
+                        NavigationLink {
+                            PantallaPublicacion(publicacion_actual: publicacion)
+                            //PantallaNota(noticia: noticia)
+                        } label: {
+                            Encabezado(publicacion: publicacion)
+                            Text("hola mundo")
+                        }
+                        .buttonStyle(.plain)
+                        
+                        )
+                        )
+                    }
+                }
+                
 #Preview {
-    NavigationStack {
-        PantallaNoticias()
-            .environment(ControladorGeneral())
-    }
+NavigationStack {
+                        PantallaNoticias()
+                            .environment(ControladorGeneral())
 }
+}
+            
