@@ -1,19 +1,20 @@
 //
-//  ContentView.swift
+//  control_navegacionApp.swift
 //  control_navegacion
 //
-//  Created by Miguel Angel Longoria Granados on 29/09/25.
+//  Created by Jadzia Gallegos on 29/09/25.
 //
 
 import SwiftUI
 
 @main
 struct control_navegacionApp: App {
-    @State var contorlador_app = ControladorGeneral()
+    @State var controlador_app = ControladorGeneral()
+    
     var body: some Scene {
         WindowGroup {
             NavegacionPrincipal()
-                .environment(contorlador_app)
+                .environment(controlador_app)
         }
     }
 }

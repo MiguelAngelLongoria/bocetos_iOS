@@ -2,9 +2,8 @@
 //  pantalla_galeria.swift
 //  control_navegacion
 //
-//  Created by Miguel Angel Longoria Granados on 29/09/25.
+//  Created by Jadzia Gallegos on 29/09/25.
 //
-
 import SwiftUI
 
 struct PantallaGaleria: View {

@@ -1,3 +1,10 @@
+//
+//  noticia.swift
+//  control_navegacion
+//
+//  Created by Jadzia Gallegos on 29/09/25.
+//
+
 import Foundation
 
 enum Prioridades{
@@ -29,14 +36,14 @@ let noticias = [
     Noticia(
         titular: "Banco Central anuncia nueva política monetaria para estabilizar economía",
         cuerpo: "El organismo implementará medidas para controlar la inflación y fortalecer el crecimiento económico en los próximos trimestres.",
-        imagen: "imagen_chida",
+        imagen: "avogato",
         prioridad: .importante
     ),
     
     Noticia(
         titular: "Cumbre climática global establece nuevos compromisos para reducción de emisiones",
         cuerpo: "Líderes mundiales acuerdan metas más ambiciosas para combatir el cambio climático en reunión de emergencia.",
-        imagen: "imagen_chida02",
+        imagen: "clima",
         prioridad: .importante
     ),
     
@@ -44,14 +51,14 @@ let noticias = [
     Noticia(
         titular: "¡ESCÁNDALO! Famoso actor fue visto teniendo una cena romántica con su ex",
         cuerpo: "Nuestros reporteros captaron el momento exacto del reencuentro que tiene en vilo a la farándula internacional.",
-        imagen: "imagen_chida03",
+        imagen: "escan-dalo",
         prioridad: .normal
     ),
     
     Noticia(
         titular: "MISTERIO: Vecinos juran haber visto OVNI sobre urbanización exclusiva",
         cuerpo: "Extrañas luces y objetos no identificados mantienen en alerta a residentes de la zona norte.",
-        imagen: "imagen_chida04",
+        imagen: "ovni",
         prioridad: .normal
     ),
     
@@ -59,14 +66,14 @@ let noticias = [
     Noticia(
         titular: "Policía arresta a hombre disfrazado de pollo por bailar en medio de autopista",
         cuerpo: "El sujeto alegó que estaba practicando para un concurso de baile urbano cuando fue detenido.",
-        imagen: "imagen_chida05",
+        imagen: "pollo",
         prioridad: .normal
     ),
     
     Noticia(
         titular: "Gato se convierte en alcalde honorario de pequeño pueblo tras ganar elecciones no oficiales",
         cuerpo: "Los habitantes aseguran que 'Whiskers' tiene mejores ideas que los políticos profesionales.",
-        imagen: "imagen_chida06",
+        imagen: "gato-alcalde",
         prioridad: .importante
     ),
     
@@ -81,7 +88,7 @@ let noticias = [
     Noticia(
         titular: "Inauguran nuevo centro cultural con exposición de artistas emergentes",
         cuerpo: "La comunidad artística celebra la apertura de este espacio dedicado a promover el talento local.",
-        imagen: "imagen_chida07",
+        imagen: "centro-cultural",
         prioridad: .sociales
     ),
     

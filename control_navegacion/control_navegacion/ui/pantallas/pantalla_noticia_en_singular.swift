@@ -1,8 +1,8 @@
 //
-//  noticia_individual.swift
+//  pantalla_noticia_en_singular.swift
 //  control_navegacion
 //
-//  Created by Miguel Angel Longoria Granados on 01/10/25.
+//  Created by Jadzia Gallegos on 01/10/25.
 //
 
 import SwiftUI
@@ -11,28 +11,21 @@ struct PantallaNota: View {
     @State var noticia: Noticia
     
     var body: some View {
-        Spacer()
-        VStack {
+        VStack{
             Text(noticia.titular)
                 .fontWeight(.bold)
-                .font(.title) // tamaño de letra un poco más grande
+                .fontWidth(.expanded)
             
-            HStack {
+            HStack{
                 Image(systemName: "square.and.arrow.down")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 150)
-                
+
                 Text(noticia.cuerpo)
-                    .font(.body) // tamaño estándar para el cuerpo
             }
-            
             Spacer()
         }
-        .padding()
-        // Fondo  azul claro
-        .background(Color.blue.opacity(0.2))
-        .ignoresSafeArea() // se extiende a toda la pantalla
     }
 }
 

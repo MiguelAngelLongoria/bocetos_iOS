@@ -1,3 +1,10 @@
+//
+//  moelcula_encabezado.swift
+//  control_navegacion
+//
+//  Created by Jadzia Gallegos on 29/09/25.
+//
+
 import SwiftUI
 import SceneKit
 
@@ -20,7 +27,7 @@ struct Encabezado: View {
                     Text(publicacion.title)
                         .lineLimit(1)
                         .fontWeight(.bold)
-                        .foregroundStyle(Color.red)
+                        .foregroundStyle(Color.mint)
                     
                     Spacer()
                 }
