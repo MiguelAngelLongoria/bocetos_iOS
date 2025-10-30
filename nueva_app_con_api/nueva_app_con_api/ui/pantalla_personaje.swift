@@ -16,7 +16,7 @@ struct PantallaPersonaje: View {
             VStack {
                 ScrollView {
                     ForEach(controlador.personajes) { personaje in
-                        NavigationLink(destination: DetalleChisteView(personaje: personaje)) {
+                        NavigationLink(destination: ChisteView(personaje: personaje)) {
                             TarjetaPersonaje(personaje: personaje)
                                 .buttonStyle(.plain)
                                 .font(.headline)
@@ -54,12 +54,19 @@ struct PantallaPersonaje: View {
     }
 }
 
-struct DetalleChisteView: View {
+struct ChisteView: View {
     @Environment(DemonSlayerApp.self) var controlador
     let personaje: Personaje
     
     var body: some View {
-        let chiste = String(describing: controlador.chiste?.joke)
+        
+        
+        /*
+        let chiste = String(describing: controlador.chiste.joke)
+         */
+        
+        let chiste = controlador.chiste?.joke ?? "Cargando chiste..."
+
         
         VStack(spacing: 16) {
             Text("Pantalla del personaje \(personaje.name)")
